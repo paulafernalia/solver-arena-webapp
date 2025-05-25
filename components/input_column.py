@@ -1,6 +1,7 @@
 import dash_bootstrap_components as dbc
 from dash import dcc, html
 
+from components import base
 from utils import colors, fonts
 
 
@@ -8,8 +9,8 @@ def input_column():
     return html.Div(
         id="input-div",
         children=[
-            title("SolverArena"),
-            subtitle("MIP Solver Benchmarking"),
+            base.title("SolverArena"),
+            base.subtitle("MIP Solver Benchmarking"),
             html.Div(style={"height": "50px"}),
             steps_text("1. Upload an instance in .mps or .lp format"),
             html.Div(style={"height": "10px"}),
@@ -29,30 +30,6 @@ def input_column():
             "boxSizing": "border-box",
             "height": "100vh",
             "margin": "auto",
-        },
-    )
-
-
-def title(text: str):
-    return html.H3(
-        text,
-        style={
-            "color": colors.MUSTARD_YELLOW,
-            "fontFamily": fonts.MONO,
-            "fontSize": "28px",
-        },
-    )
-
-
-def subtitle(text: str):
-    return html.H4(
-        text,
-        style={
-            "color": "#BBBBBB",  # grey color
-            "fontFamily": fonts.MONO,
-            "marginTop": "4px",
-            "fontWeight": "normal",
-            "fontSize": "15px",
         },
     )
 
@@ -93,7 +70,7 @@ def solver_select():
 def run_button():
     return dbc.Button(
         "Run comparison",
-        id="show-button",
+        id="run-button",
         n_clicks=0,
         className="custom-button",
         style={

@@ -1,3 +1,5 @@
+import time
+
 import dash_bootstrap_components as dbc
 from dash import Dash, Input, Output, State, callback
 
@@ -11,12 +13,11 @@ app.layout = layout
 
 @callback(
     Output("output-div", "style"),
-    Input("show-button", "n_clicks"),
+    Input("run-button", "n_clicks"),
     State("output-div", "style"),
     prevent_initial_call=True,
 )
 def show_div(n_clicks, current_style):
-    print("clicked")
     if n_clicks:
         new_style = current_style.copy()
         new_style["display"] = "block"
@@ -24,6 +25,17 @@ def show_div(n_clicks, current_style):
         new_style["transform"] = "translateX(0)"
         return new_style
     return current_style
+
+
+@callback(
+    Output("loading-output", "children"),
+    Input("run-button", "n_clicks"),
+    prevent_initial_call=True,
+)
+def input_triggers_nested(n_clicks):
+    if n_clicks:
+        time.sleep(5)
+        return "Results"
 
 
 if __name__ == "__main__":

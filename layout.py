@@ -1,7 +1,7 @@
 from dash import html
 
 from components.input_column import input_column
-from utils import colors
+from components.output_column import output_column
 
 layout = html.Div(
     style={
@@ -11,21 +11,6 @@ layout = html.Div(
     },
     children=[
         input_column(),
-        html.Div(
-            "Right column content",
-            id="output-div",
-            style={
-                "display": "none",
-                "opacity": "0",
-                "transform": "translateX(-100%)",
-                "transition": "all 0.5s ease",
-                "backgroundColor": colors.DARK_BLACK,
-                "width": "67%",
-                "padding": "20px",
-                "boxSizing": "border-box",
-                "height": "100vh",
-                "margin": "auto",
-            },
-        ),
+        output_column(),
     ],
 )
