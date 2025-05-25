@@ -1,0 +1,5 @@
+#upload-button:hover {
+    background-color: #444;
+    border-color: #aaa;
+    color: #ffd54f;  /* lighter mustard on hover */
+}
