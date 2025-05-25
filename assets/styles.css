@@ -1,5 +1,32 @@
-#upload-button:hover {
-    background-color: #444;
+.custom-button:hover {
+    background-color: var(--dark-gray);
     border-color: #aaa;
-    color: #ffd54f;  /* lighter mustard on hover */
+    color: var(--mustard-yellow);  /* lighter mustard on hover */
+}
+
+.custom-button {
+    background-color: var(--light-black);
+    color: white;  /* default text color */
+    font-family: var(--mono-font);
+    font-size: var(--small-font-size);
+    padding: 8px 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #666;
+    border-color: #aaa;
+    transition: background-color 0.3s ease;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    margin-right: 8px; /* space between checkbox and label */
+    margin-bottom: 12px; /* spacing between items */
+    accent-color: var(--mustard-yellow);
+}
+
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
