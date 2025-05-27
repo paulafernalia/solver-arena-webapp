@@ -30,3 +30,11 @@ The list of dependencies can be found in `pyproject.toml`. Requires Python 3.13+
     ```bash
     uv run app.py
     ```
+
+---
+
+## License
+
+MIT License. See `LICENSE` file for details.
+
+
