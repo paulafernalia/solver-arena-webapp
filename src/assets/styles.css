@@ -4,6 +4,11 @@
     color: var(--accent);  /* lighter mustard on hover */
 }
 
+.custom-button.selected {
+    background-color: #00aaff;
+    font-weight: bold;
+}
+
 .custom-button {
     background-color: var(--light-black);
     color: white;  /* default text color */

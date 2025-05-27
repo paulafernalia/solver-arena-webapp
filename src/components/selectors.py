@@ -26,17 +26,12 @@ def button_toggle(id_, labels):
         id=id_,
         children=[html.Div(style={"height": "30px"})]
         + [
-            html.Div(
+            html.Button(
+                label,
                 id={"type": id_, "index": label},
-                children=label,
                 n_clicks=0,
                 className="custom-button",
-                style={
-                    "margin-bottom": "10px",
-                    # "padding": "8px 2px",
-                    "width": "130px",
-                    "textAlign": "center",
-                },
+                style={"margin-bottom": "10px"},
             )
             for label in labels
         ],

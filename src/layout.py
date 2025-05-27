@@ -70,7 +70,7 @@ layout = html.Div(
                             style={"flex": "1"},
                         ),
                         selectors.button_toggle(
-                            "solver-toggle-results", labels=solvers.names
+                            id_="solver-toggle-results", labels=solvers.names
                         ),
                     ],
                 ),
