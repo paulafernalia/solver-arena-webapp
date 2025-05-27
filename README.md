@@ -35,6 +35,6 @@ The list of dependencies can be found in `pyproject.toml`. Requires Python 3.13+
 
 ## License
 
-MIT License. See `LICENSE` file for details.
+GPL-3.0 License. See `LICENSE file for details.
 
 
