@@ -1,7 +1,7 @@
 .custom-button:hover {
     background-color: var(--dark-gray);
     border-color: #aaa;
-    color: var(--mustard-yellow);  /* lighter mustard on hover */
+    color: var(--accent);  /* lighter mustard on hover */
 }
 
 .custom-button {
@@ -9,7 +9,7 @@
     color: white;  /* default text color */
     font-family: var(--mono-font);
     font-size: var(--small-font-size);
-    padding: 8px 25px;
+    padding: 8px 15px;
     cursor: pointer;
     border-radius: 3px;
     border: 1px solid #666;
@@ -20,7 +20,25 @@
 .custom-checkbox input[type="checkbox"] {
     margin-right: 8px; /* space between checkbox and label */
     margin-bottom: 12px; /* spacing between items */
-    accent-color: var(--mustard-yellow);
+    accent-color: var(--accent);
+}
+
+.left-panel {
+    background-color: var(--light-black);
+    width: 33%;
+    padding: 50px;
+    box-sizing: border-box;
+    height: 100vh;
+    margin: auto;
+}
+
+.right-panel {
+    background-color: var(--dark-black);
+    width: 67%;
+    padding: 50px;
+    box-sizing: border-box;
+    height: 100vh;
+    margin: auto;
 }
 
 

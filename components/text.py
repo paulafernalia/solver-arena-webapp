@@ -3,7 +3,7 @@ from dash import html
 from utils import colors, fonts
 
 
-def title(text: str, color: str = colors.MUSTARD_YELLOW):
+def title(text: str, color: str = colors.ACCENT):
     return html.H3(
         text,
         style={
@@ -23,5 +23,16 @@ def subtitle(text: str):
             "marginTop": "4px",
             "fontWeight": "normal",
             "fontSize": "15px",
+        },
+    )
+
+
+def step(text: str):
+    return html.P(
+        text,
+        style={
+            "fontSize": fonts.SMALL_SIZE,
+            "color": colors.TEXT_LIGHT,  # grey color
+            "fontFamily": fonts.MONO,
         },
     )
