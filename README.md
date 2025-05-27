@@ -2,7 +2,6 @@
 
 A responsive web dashboard built with [Plotly Dash](https://dash.plotly.com/) to interact with [Solver Arena](https://github.com/pataq21/SolverArena). 
 
----
 
 ## Dependencies
 
@@ -10,7 +9,6 @@ This project uses [**uv**](https://github.com/astral-sh/uv) for dependency and e
 
 The list of dependencies can be found in `pyproject.toml`. Requires Python 3.13+.
 
----
 
 ## Usage
 
@@ -31,14 +29,7 @@ The list of dependencies can be found in `pyproject.toml`. Requires Python 3.13+
     uv run app.py
     ```
 
----
 
-## License
-
-GPL-3.0 License. See `LICENSE file for details.
-
-
---- 
 
 ## Project structure
 
@@ -76,3 +67,8 @@ GPL-3.0 License. See `LICENSE file for details.
 │   └── solvers.py              # Solver list
 └──
 ```
+
+
+## License
+
+GPL-3.0 License. See `LICENSE` file for details.
