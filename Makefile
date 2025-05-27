@@ -1,2 +1,5 @@
 run:
-	uv run app.py
+	uv run src/app.py
+
+ruff:
+	uv run ruff format
