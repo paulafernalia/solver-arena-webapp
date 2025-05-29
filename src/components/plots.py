@@ -49,34 +49,35 @@ def bar_chart():
     return dcc.Graph(id="time-bar-chart", figure=fig)
 
 
-def gap_progress_line_chart(selected_solver):
-    x = list(range(10))  # e.g., time or iterations
+def gap_progress_line_chart(solvers):
+    x = list(range(100))  # e.g., time or iterations
     fig = go.Figure()
 
-    y = data.generate_ub_data()
+    for solver in solvers:
+        y = data.generate_ub_data(steps=100)
 
-    fig.add_trace(
-        go.Scatter(
-            x=x,
-            y=y,
-            mode="lines",
-            name=selected_solver,
-            line=dict(color=colors.ACCENT, width=3),
-            marker=dict(size=6),
-            showlegend=False,
+        fig.add_trace(
+            go.Scatter(
+                x=x,
+                y=y,
+                mode="lines",
+                name=solver,
+                line=dict(color=colors.ACCENT, width=3),
+                marker=dict(size=6),
+                showlegend=False,
+            )
         )
-    )
-    fig.add_trace(
-        go.Scatter(
-            x=x,
-            y=[-value + 1500 for value in y],
-            mode="lines",
-            name=selected_solver,
-            line=dict(color=colors.ACCENT, dash="dash"),
-            marker=dict(size=6),
-            showlegend=False,
+        fig.add_trace(
+            go.Scatter(
+                x=x,
+                y=[-value + 1500 for value in y],
+                mode="lines",
+                name=solver,
+                line=dict(color=colors.ACCENT, dash="dash"),
+                marker=dict(size=6),
+                showlegend=False,
+            )
         )
-    )
 
     fig.update_layout(
         xaxis=dict(

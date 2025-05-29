@@ -1,4 +1,4 @@
-from dash import html
+from dash import dcc, html
 
 from components import buttons, plots, selectors, text
 from utils import solvers
@@ -66,12 +66,18 @@ layout = html.Div(
                         # Chart on the left
                         html.Div(
                             id="ub-line-chart-container",
-                            children=plots.gap_progress_line_chart("GUROBI"),
-                            style={"flex": "1"},
+                            children=plots.gap_progress_line_chart(solvers.names),
+                            style={
+                                "flex": "1",
+                                "width": "80%",
+                            },
                         ),
+                        # Buttons to select and unselect solvers
                         selectors.button_toggle(
-                            "solver-toggle-results", labels=solvers.names
+                            id_="solver-toggle-results", labels=solvers.names
                         ),
+                        # Hidden div for the selected solvers
+                        dcc.Store(id="selected-solvers-store", data=[]),
                     ],
                 ),
             ],

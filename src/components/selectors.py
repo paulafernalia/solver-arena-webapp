@@ -24,19 +24,18 @@ def checklist(id_, labels, values):
 def button_toggle(id_, labels):
     return html.Div(
         id=id_,
-        children=[html.Div(style={"height": "30px"})]
+        children=[
+            html.Div(id=id_ + "-selected", style={"display": "none"}),
+            html.Div(style={"height": "30px"}),
+        ]
         + [
-            html.Div(
+            html.Button(
+                label,
                 id={"type": id_, "index": label},
-                children=label,
                 n_clicks=0,
                 className="custom-button",
-                style={
-                    "margin-bottom": "10px",
-                    # "padding": "8px 2px",
-                    "width": "130px",
-                    "textAlign": "center",
-                },
+                style={"margin-bottom": "10px", "padding": "6px", "width": "130px"},
+                value=label,
             )
             for label in labels
         ],

@@ -26,7 +26,7 @@ The list of dependencies can be found in `pyproject.toml`. Requires Python 3.13+
 
 3. **Run in development mode**
     ```bash
-    uv run app.py
+    uv run src/app.py
     ```
 
 
