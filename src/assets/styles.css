@@ -1,12 +1,14 @@
 .custom-button:hover {
     background-color: var(--dark-gray);
     border-color: #aaa;
-    color: var(--accent);  /* lighter mustard on hover */
+    color: var(--accent);
+    border: 1px solid white;
 }
 
 .custom-button.selected {
-    background-color: #00aaff;
+    background-color: var(--dark-gray);
     font-weight: bold;
+    color: var(--accent);
 }
 
 .custom-button {
