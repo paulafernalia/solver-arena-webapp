@@ -72,6 +72,8 @@ layout = html.Div(
                         selectors.button_toggle(
                             id_="solver-toggle-results", labels=solvers.names
                         ),
+                        # Hidden div for the selected solvers
+                        dcc.Store(id="selected-solvers-store", data=[]),
                     ],
                 ),
             ],
