@@ -62,7 +62,7 @@ def gap_progress_line_chart(solvers):
                 y=y,
                 mode="lines",
                 name=solver,
-                line=dict(color=colors.ACCENT, width=3),
+                line=dict(color=colors.ACCENT, width=1),
                 marker=dict(size=6),
                 showlegend=False,
             )
@@ -73,7 +73,7 @@ def gap_progress_line_chart(solvers):
                 y=[-value + 1500 for value in y],
                 mode="lines",
                 name=solver,
-                line=dict(color=colors.ACCENT, dash="dash"),
+                line=dict(color=colors.ACCENT, dash="dash", width=1),
                 marker=dict(size=6),
                 showlegend=False,
             )
@@ -86,7 +86,7 @@ def gap_progress_line_chart(solvers):
             title_font=dict(size=14),
         ),
         yaxis=dict(
-            title="Objective",
+            title="Objective value",
             showgrid=False,
             title_font=dict(size=14),
         ),
