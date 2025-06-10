@@ -33,7 +33,7 @@
 .left-panel {
     background-color: var(--light-black);
     width: 33%;
-    padding: 50px;
+    padding: 70px;
     box-sizing: border-box;
     height: 100vh;
     margin: auto;
@@ -42,7 +42,7 @@
 .right-panel {
     background-color: var(--dark-black);
     width: 67%;
-    padding: 50px;
+    padding: 70px;
     box-sizing: border-box;
     height: 100vh;
     margin: auto;
