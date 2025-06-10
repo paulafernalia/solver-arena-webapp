@@ -1,6 +1,7 @@
 from dash import dcc, html
 
 from components import buttons, plots, selectors, text
+from data.dummy import summary_df
 from utils import solvers
 
 layout = html.Div(
@@ -24,7 +25,7 @@ layout = html.Div(
                 text.step("1. Upload an instance in .mps or .lp format"),
                 html.Div(style={"height": "10px"}),
                 buttons.upload_button(label="Upload file"),
-                html.Div(style={"height": "50px"}),
+                html.Div(style={"height": "70px"}),
                 #
                 # Step 2: SELECT SOLVERS
                 text.step("2. Select solvers"),
@@ -49,10 +50,14 @@ layout = html.Div(
                 # TITLE + Selected file:
                 text.title("Benchmarking results", "grey"),
                 text.subtitle("for myproblem.mps"),
-                html.Div(style={"height": "50px"}),
+                html.Div(style={"height": "80px"}),
                 #
                 # Basic KPI bar chart
-                # plots.bar_chart(),
+                html.Div(
+                    children=plots.summary_datatable(summary_df),
+                    style={"padding-right": "50px"},
+                ),
+                html.Div(style={"height": "50px"}),
                 #
                 # Optimality gap progress
                 text.step("Optimality gap over time"),
