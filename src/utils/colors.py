@@ -3,6 +3,8 @@ LIGHT_BLACK = "#2b2b2b"
 ACCENT = "#FFDB58"
 TEXT_LIGHT = "#FFFFFF"
 DARK_GRAY = "#444"
+TEXT_DARK = "lightgrey"
+
 
 def hex_to_rgb(hex_color):
     """Convert hex color to RGB string like '255, 255, 0'."""
