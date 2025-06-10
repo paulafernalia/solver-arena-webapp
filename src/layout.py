@@ -55,6 +55,7 @@ layout = html.Div(
                 # plots.bar_chart(),
                 #
                 # Optimality gap progress
+                text.step("Optimality gap over time"),
                 html.Div(
                     style={
                         "display": "flex",
